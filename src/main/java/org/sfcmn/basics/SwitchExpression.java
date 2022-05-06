@@ -34,8 +34,14 @@ public class SwitchExpression {
     }
     String feeling = switch (season) {
       case SPRING, AUTUMN -> "舒服";
-      case SUMMER         -> "热死了";
-      case WINTER         -> "冻死了";
+      case SUMMER         -> {
+        System.out.println("\uD83E\uDD75");
+        yield "热死了";
+      }
+      case WINTER         -> {
+        System.out.println("\uD83E\uDD76");
+        yield "冻死了";
+      }
     };
     System.out.println(feeling);
   }
